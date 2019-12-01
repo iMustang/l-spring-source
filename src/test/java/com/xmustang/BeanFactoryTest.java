@@ -14,11 +14,13 @@ import org.springframework.core.io.ClassPathResource;
 public class BeanFactoryTest {
     @Test
     public void testSimpleLoad() {
-		// 使用Spring 3.0.7.RELEASE版本研究
+        // 下面源码分析用3.0.7.RELEASE
         BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beanFactoryTest.xml"));
-        MyTestBean myTestBean = (MyTestBean) bf.getBean("myTestBean");
+        MyTestBean myTestBean = bf.getBean(MyTestBean.class);
 
+        // 下面源码分析用4.3.11.RELEASE
         ApplicationContext ac = new ClassPathXmlApplicationContext("beanFactoryTest.xml");
-        ac.getBean("myTestBean");
+        MyTestBean bean = ac.getBean(MyTestBean.class);
+
     }
 }

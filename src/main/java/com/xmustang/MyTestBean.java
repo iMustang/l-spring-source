@@ -1,17 +1,12 @@
 package com.xmustang;
 
+import lombok.Data;
+
 /**
  * MyTestBean
  * description:
  */
+@Data
 public class MyTestBean {
-	private String testStr = "testStr";
-
-	public String getTestStr() {
-		return testStr;
-	}
-
-	public void setTestStr(String testStr) {
-		this.testStr = testStr;
-	}
+    private String testStr = "testStr";
 }

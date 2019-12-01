@@ -8,7 +8,7 @@
     <artifactId>l-spring-source</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <spring.version>3.0.7.RELEASE</spring.version>
+        <spring.version>4.3.11.RELEASE</spring.version>
     </properties>
     <dependencies>
         <dependency>
@@ -21,6 +21,13 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!-- 查看Spring事务引入的 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -31,6 +38,24 @@
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- //下面这两个aspectj的依赖是为了引入AspectJ的注解 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.6.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.6.12</version>
+        </dependency>
+        <!-- Spring AOP底层会使用CGLib来做动态代理-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>2.2</version>
         </dependency>
     </dependencies>
     <build>
