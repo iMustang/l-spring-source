@@ -40,12 +40,8 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- //下面这两个aspectj的依赖是为了引入AspectJ的注解 -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>1.6.12</version>
-        </dependency>
+        <!-- aspectjweaver包含aspectjrt，所以我们只需要引入aspectjweaver依赖包就可 -->
+        <!-- 此处的包含，不是aspectjweaver依赖aspectjrt，而是aspectjweaver包中的代码直接有aspectjrt-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>

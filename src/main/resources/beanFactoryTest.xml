@@ -4,5 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean class="com.xmustang.MyTestBean"></bean>
+    <!--<bean class="com.xmustang.MyTestBean"></bean>-->
+
+    <bean id="myTestBean" class="com.xmustang.MyTestBean" init-method="init" destroy-method="down">
+        <property name="testStr" value="hello"/>
+    </bean>
+
+    <bean id="myBeanPostProcessor" class="com.xmustang.MyBeanPostProcessor"/>
+
+    <bean id="myBeanFactoryPostProcessor" class="com.xmustang.MyBeanFactoryPostProcessor"/>
 </beans>
