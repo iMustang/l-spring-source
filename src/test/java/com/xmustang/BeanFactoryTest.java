@@ -16,9 +16,13 @@ public class BeanFactoryTest {
 
         // 下面源码分析用4.3.11.RELEASE
         AbstractApplicationContext ac = new ClassPathXmlApplicationContext("beanFactoryTest.xml");
-        MyTestBean bean = ac.getBean(MyTestBean.class);
-//        System.out.println("打印值为：" + bean.getTestStr());
+        System.out.println("==========");
 
+        System.out.println("从容器中获取bean");
+        MyTestBean bean = ac.getBean(MyTestBean.class);
+        System.out.println("打印值为：" + bean.getTestStr());
+
+        System.out.println("==========");
         ac.close();
     }
 }
